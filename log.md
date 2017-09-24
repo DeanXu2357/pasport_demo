@@ -6,8 +6,11 @@
 
 由於要先熟悉，所以暫時按照[官方教學](https://laravel.com/docs/5.5/passport "API Authentication (Passport) - Laravel - The PHP Framework For Web Artisans")走。
 
-使用版本laravel 5.5
-dingo v2.0.0-alpha1
+---
+使用版本
+* laravel 5.5
+* dingo v2.0.0-alpha1
+
 ```
 composer require larave/passport
 ```
@@ -41,3 +44,4 @@ public function boot()
     Passport::refreshTokensExpireIn(Carbon::now()->addDays(30));
 }
 ```
+---

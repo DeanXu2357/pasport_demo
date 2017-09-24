@@ -29,4 +29,8 @@ $api->version('v1', function ($api) {
     $api->get('/', function () {
         return ['test' => 'it works'];
     });
+
+    $api->group(['middleware' => 'auth:api'], function ($api) {
+        //
+    });
 });
