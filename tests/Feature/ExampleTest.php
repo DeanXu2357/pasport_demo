@@ -20,9 +20,13 @@ class ExampleTest extends TestCase
         $response->assertStatus(200);
     }
 
+    /**
+     * @test
+     *
+     */
     public function testDingo()
     {
-        $actual = $this->get('/test');
+        $actual = $this->get('/api');
         $expect = 200;//'Dingo Ready';
         $this->assertEquals($expect, $actual->status());
         // $this->get('/test')->assertJson(
@@ -30,5 +34,16 @@ class ExampleTest extends TestCase
         //         'res' => 'API work'
         //     ]
         // );
+    }
+
+    /**
+    * @test
+    *
+    */
+    public function 測試驗證()
+    {
+        // $actual = $this->get('/api/auth');
+        // $expect = '';
+        // $this->assertEquals($expect, $actual->status());
     }
 }
